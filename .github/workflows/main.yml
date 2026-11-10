@@ -1,0 +1,12 @@
+name: Primer workflow 
+
+on: push
+
+jobs:
+  probar_software:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Hola Actions!" #comando que podemos lanzar en ese sistema, en una shell
+        
