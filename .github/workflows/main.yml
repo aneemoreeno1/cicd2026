@@ -1,10 +1,17 @@
 name: Primer workflow 
 
-on: push
+on: 
+  push:
+    branches:
+      -main #se puede mas filas por rama
+      
 
 jobs:
   probar_software:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
     
