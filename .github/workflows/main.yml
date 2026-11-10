@@ -10,3 +10,8 @@ jobs:
       - name: Mostrar mensaje
         run: echo "Hola Actions!" #comando que podemos lanzar en ese sistema, en una shell
         
+      - name: Bajar codigo #uno de los predeterminados
+        uses: actions/checkout@v7
+
+      - name: Probar codigo
+        run: python3 main.py
